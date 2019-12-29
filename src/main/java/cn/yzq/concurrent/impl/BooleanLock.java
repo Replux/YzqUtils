@@ -13,7 +13,7 @@ import java.util.concurrent.TimeoutException;
  * 一个可以被打断的锁
  * @since 2019-12-28 20:55:08
  */
-public final class BooleanLock implements Lock {
+public class BooleanLock implements Lock {
 
     private Thread owner;
 

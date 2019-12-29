@@ -1,12 +1,10 @@
 package cn.yzq.concurrent;
 
-import javafx.concurrent.Worker;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 /**
  * 简化版线程池
@@ -22,8 +20,8 @@ public class SimpleThreadPool extends Thread{
     };
 
     //component:
-    private final static LinkedList<Runnable> TASK_QUEUE=new LinkedList<>();
-    private final static List<Worker> WORKER_LIST = new ArrayList<>();
+    private volatile static LinkedList<Runnable> TASK_QUEUE=new LinkedList<>();
+    private volatile static List<Worker> WORKER_LIST = new ArrayList<>();
 
     //attributes:
     private final int taskCapacity;
@@ -41,6 +39,16 @@ public class SimpleThreadPool extends Thread{
                 4,
                 8,
                 16,
+                DEFAULT_TASK_QUEUE_CAPACITY,
+                DEFAULT_DISCARD_POLICY
+        );
+    }
+
+    public SimpleThreadPool(int minNum,int activeNum,int maxNum) {
+        this(
+                minNum,
+                activeNum,
+                maxNum,
                 DEFAULT_TASK_QUEUE_CAPACITY,
                 DEFAULT_DISCARD_POLICY
         );
@@ -125,6 +133,9 @@ public class SimpleThreadPool extends Thread{
         this.start();
     }
 
+    /**
+     * 该函数被单线程调用所以是线程安全的
+     */
     private void createWork(){
         Worker task = new Worker(group,THREAD_PREFIX + (num++) ) ;
         task.start();
