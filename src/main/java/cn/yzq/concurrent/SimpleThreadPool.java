@@ -1,6 +1,9 @@
 package cn.yzq.concurrent;
 
+import javafx.concurrent.Worker;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -9,11 +12,10 @@ import java.util.stream.IntStream;
  * 简化版线程池
  * @since 2019-12-28 20:53:56
  */
-public class SimpleThreadPool {
+public class SimpleThreadPool extends Thread{
 
     //DEFAULT OR CONSTANTS:
-    private final static int DEFAULT_SIZE=8;
-    private final static int DEFAULT_TASK_QUEUE_CAPACITY=1000;
+    private final static int DEFAULT_TASK_QUEUE_CAPACITY=1000; //任务上限
     private final static String THREAD_PREFIX="ThreadPool-";
     public final static DiscardPolicy DEFAULT_DISCARD_POLICY=()->{
         throw new DiscardException("Discarding this task");
@@ -24,21 +26,30 @@ public class SimpleThreadPool {
     private final static List<Worker> WORKER_LIST = new ArrayList<>();
 
     //attributes:
-    private final int size;
     private final int taskCapacity;
     private final DiscardPolicy discardPolicy;
     private static volatile int num=0;
     private final static ThreadGroup group = new ThreadGroup("ThreadPool");
     private volatile boolean shutdown =false;
-
+    private int maxNum;
+    private int minNum;
+    private int activeNum;
 
     //constructor:
     public SimpleThreadPool() {
-        this(DEFAULT_SIZE,DEFAULT_TASK_QUEUE_CAPACITY,DEFAULT_DISCARD_POLICY);
+        this(
+                4,
+                8,
+                16,
+                DEFAULT_TASK_QUEUE_CAPACITY,
+                DEFAULT_DISCARD_POLICY
+        );
     }
 
-    public SimpleThreadPool(int size, int taskCapacity, DiscardPolicy discardPolicy) {
-        this.size = size;
+    public SimpleThreadPool(int minNum,int activeNum,int maxNum,int taskCapacity, DiscardPolicy discardPolicy) {
+        this.minNum = minNum;
+        this.activeNum = activeNum;
+        this.maxNum = maxNum;
         this.taskCapacity=taskCapacity;
         this.discardPolicy=discardPolicy;
         init();
@@ -60,16 +71,17 @@ public class SimpleThreadPool {
         while(!TASK_QUEUE.isEmpty()){
             Thread.sleep(10);
         }
-
-        int count = WORKER_LIST.size();
-        while(count>0){
-            for(Worker worker: WORKER_LIST){
-                if(TaskState.BLOCKED.equals(worker.getTaskState() )){
-                    worker.interrupt();
-                    worker.close();
-                    count--;
-                }else {
-                    Thread.sleep(10);
+        synchronized (WORKER_LIST){
+            int count = WORKER_LIST.size();
+            while(count>0){
+                for(Worker worker: WORKER_LIST){
+                    if(!TaskState.RUNNING.equals(worker.getTaskState() )){
+                        worker.interrupt();
+                        worker.close();
+                        count--;
+                    }else {
+                        Thread.sleep(10);
+                    }
                 }
             }
         }
@@ -77,32 +89,91 @@ public class SimpleThreadPool {
     }
 
     //getter:
-    public int getSize() {
-        return size;
+    public int getWorkerNum() {
+        return WORKER_LIST.size();
     }
 
     public int getTaskCapacity() {
         return taskCapacity;
     }
 
+    public int getTaskCount(){
+        return TASK_QUEUE.size();
+    }
+
     public boolean isShutdown() {
         return shutdown;
     }
 
-    //private method:
-    private void init() {
-        for(int i=0;i<size;++i){
-            createWorks();
-        }
+    public int getMaxNum() {
+        return maxNum;
     }
 
-    private void createWorks(){
+    public int getMinNum() {
+        return minNum;
+    }
+
+    public int getActiveNum() {
+        return activeNum;
+    }
+
+    //private method:
+    private void init() {
+        for(int i=0;i<minNum;++i){
+            createWork();
+        }
+        this.start();
+    }
+
+    private void createWork(){
         Worker task = new Worker(group,THREAD_PREFIX + (num++) ) ;
         task.start();
         WORKER_LIST.add(task);
     }
 
 
+    @Override
+    public void run() {
+        while(!shutdown){
+            try {
+                Thread.sleep(500);
+                int workerNum = this.getWorkerNum();
+                if(this.getTaskCount()>activeNum && workerNum<activeNum){
+                    int diffNum=activeNum-workerNum;
+                    for(int i=0;i<diffNum;++i){
+                        createWork();
+                    }
+                }else if(this.getTaskCount()>maxNum && workerNum<maxNum){
+                    int diffNum=maxNum-workerNum;
+                    for(int i=0;i<diffNum;++i){
+                        createWork();
+                    }
+                }
+
+                if(TASK_QUEUE.isEmpty() && this.getWorkerNum()>activeNum) synchronized (WORKER_LIST){
+                    if(TASK_QUEUE.isEmpty()){
+                        int releaseNum = this.getWorkerNum()-activeNum;
+                        for(Iterator<Worker> iterator = WORKER_LIST.iterator(); iterator.hasNext();){
+                            if(releaseNum<=0){
+                                break;
+                            }
+                            Worker worker = iterator.next();
+                            //防止打断正在运行的工作线程
+                            if(!TaskState.RUNNING.equals(worker.getTaskState())){
+                                worker.close();
+                                worker.interrupt();
+                                iterator.remove();
+                                releaseNum--;
+                            }
+                        }
+                    }
+                }
+
+            } catch (InterruptedException e) {
+
+            }
+        }
+    }
 
     //public inner class:
     public interface DiscardPolicy{
@@ -161,21 +232,5 @@ public class SimpleThreadPool {
         }
     }
 
-
-    public static void main(String[] args) throws InterruptedException {
-        SimpleThreadPool threadPool = new SimpleThreadPool();
-        IntStream.range(0,40).forEach(i->{
-            threadPool.submit(()->{
-                System.out.println("[ "+i+" before]the task has been executed by "+Thread.currentThread().getName());
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            });
-        });
-        Thread.sleep(10000);
-        threadPool.shutdown();
-        System.out.println(threadPool.isShutdown());
-    }
 }
+
