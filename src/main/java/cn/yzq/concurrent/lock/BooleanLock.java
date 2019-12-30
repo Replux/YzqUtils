@@ -1,7 +1,5 @@
-package cn.yzq.concurrent.impl;
+package cn.yzq.concurrent.lock;
 
-
-import cn.yzq.concurrent.Lock;
 
 import java.util.ArrayList;
 import java.util.Collections;

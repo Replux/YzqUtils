@@ -1,4 +1,4 @@
-package cn.yzq.concurrent;
+package cn.yzq.concurrent.lock;
 
 import java.util.List;
 import java.util.concurrent.TimeoutException;
