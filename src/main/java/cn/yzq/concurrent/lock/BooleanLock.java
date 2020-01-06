@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
  * 一个可以被打断的锁
  * @since 2019-12-28 20:55:08
  */
-public class BooleanLock implements Lock {
+public class BooleanLock{
 
     private Thread owner;
 
@@ -21,7 +21,6 @@ public class BooleanLock implements Lock {
         this.owner = null;
     }
 
-    @Override
     public synchronized void lock() throws InterruptedException {
         Thread currentThread = Thread.currentThread();
         while(owner!=null){
@@ -32,7 +31,6 @@ public class BooleanLock implements Lock {
         owner = currentThread;
     }
 
-    @Override
     public synchronized void lock(long mills) throws InterruptedException, TimeoutException {
         if(mills<=0){
             lock();
@@ -49,7 +47,6 @@ public class BooleanLock implements Lock {
         owner=currentThread;
     }
 
-    @Override
     public synchronized void unlock() {
         if(Thread.currentThread().equals(owner)){
             owner=null;
@@ -57,12 +54,10 @@ public class BooleanLock implements Lock {
         }
     }
 
-    @Override
     public List<Thread> getBlockedThread() {
         return Collections.unmodifiableList(blockedThreads);
     }
 
-    @Override
     public int getBlockedThreadNum() {
         return blockedThreads.size();
     }

@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="3c577b04-c5f0-43cd-b864-933b520ad99b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestFuture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/BooleanLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/BooleanLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/Lock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/concurrent/future/FutureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/yzq/concurrent/future/FutureService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/concurrent/lock/BooleanLock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/yzq/concurrent/lock/BooleanLock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/concurrent/lock/Lock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestFuture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestThreadPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestThreadPool.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,57 +27,88 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/future/FutureService.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestThreadPool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="232">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestCASLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/exception/GetLockException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#112#113#0" expanded="true" />
+                <element signature="e#135#136#0" expanded="true" />
+                <element signature="e#181#182#0" expanded="true" />
+                <element signature="e#204#205#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/CountDown.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/CASLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding>
-                <element signature="e#116#117#0" expanded="true" />
-                <element signature="e#150#151#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/SimpleThreadLocal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="355">
+              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#213#214#0" expanded="true" />
-                <element signature="e#272#273#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#500#501#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadLocal.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/atomic/AtomicInteger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/Unsafe.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
-              <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+              <caret line="305" column="32" selection-start-line="305" selection-start-column="32" selection-end-line="305" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/Lock.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/BooleanLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="289">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,23 +117,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/ReadWriteLock.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ClassLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="26042">
+              <caret line="961" column="7" selection-start-line="961" selection-start-column="7" selection-end-line="961" selection-end-column="7" />
               <folding>
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#37807#37808#0" expanded="true" />
+                <element signature="e#37839#37840#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Runnable.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/plugin.jar!/sun/plugin2/applet/Applet2ClassLoader.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="928">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="2030">
+              <caret line="110" column="20" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -124,6 +163,12 @@
       <find>WORKER_LIST</find>
       <find>createWork</find>
       <find>volatile</find>
+      <find>defineClasss</find>
+      <find>defineClass</find>
+      <find>findClass</find>
+      <find>resolveClass</find>
+      <find>loadClass</find>
+      <find>resolve</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -138,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/ThreadWatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/Lock.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestThreadPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/impl/BooleanLock.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/SimpleThreadPool.java" />
         <option value="$PROJECT_DIR$/src/test/java/Observer.java" />
@@ -146,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/test/java/user.java" />
         <option value="$PROJECT_DIR$/src/test/java/User.java" />
         <option value="$PROJECT_DIR$/src/test/java/Gate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/BooleanLock.java" />
         <option value="$PROJECT_DIR$/src/test/java/Client.java" />
         <option value="$PROJECT_DIR$/src/test/java/SharedData.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/ReadWriteLock.java" />
@@ -161,6 +204,25 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/QueryAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/Context.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/CountDown.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/ActiveObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/ActiveObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/FutureResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/MethodRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/DisplayStringRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/MakeStringRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/ActivationQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/SchedularThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/RealResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/Servant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/ActiveObjectFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/GetLockException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/BooleanLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/exception/GetLockException.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/TestThreadPool.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestCASLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/CASLock.java" />
       </list>
     </option>
   </component>
@@ -195,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,6 +294,15 @@
               <item name="YzqUtils" type="b2602c69:ProjectViewProjectNode" />
               <item name="YzqUtils" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YzqUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YzqUtils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,13 +316,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578140252962" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578290513439" />
+    <property name="last_opened_file_path" value="F:/看视频学技术/fruit" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -266,6 +338,7 @@
       <recent name="cn.yzq.concurrent" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.yzq.concurrent.activeobject" />
       <recent name="cn.yzq.concurrent" />
     </key>
   </component>
@@ -281,7 +354,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestFuture">
+  <component name="RunManager" selected="JUnit.TestCASLock.test">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="YzqUtils" />
@@ -294,20 +367,7 @@
       <module name="YzqUtils" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.yzq.concurrent.lock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.yzq.concurrent.Test" />
-      <module name="YzqUtils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.yzq.concurrent.lock.*" />
+          <option name="PATTERN" value="cn.yzq.concurrent.lock.exception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -329,13 +389,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCASLock.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YzqUtils" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCASLock" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCASLock.test" />
+        <item itemvalue="Application.TestThreadPool" />
         <item itemvalue="Application.TestFuture" />
         <item itemvalue="Application.Client" />
-        <item itemvalue="Application.TestThreadPool" />
         <item itemvalue="Application.SimpleThreadPool" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -353,18 +423,26 @@
       <workItem from="1577595371488" duration="4514000" />
       <workItem from="1577690751132" duration="7723000" />
       <workItem from="1577705996075" duration="1322000" />
-      <workItem from="1578124467200" duration="4014000" />
+      <workItem from="1578124467200" duration="4711000" />
+      <workItem from="1578198679493" duration="7442000" />
+      <workItem from="1578220497734" duration="2835000" />
+      <workItem from="1578286165910" duration="4345000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestCASLock_test - 2020.01.06 at 14h 01m 12s.xml">
+      <configuration name="TestCASLock.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21495000" />
+    <option name="totallyTimeSpent" value="36814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19914347" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23233405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -372,16 +450,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32964602" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32964602" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32964602" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933628" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32964602" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32964602" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32964602" />
       <window_info anchor="right" id="Palette" order="0" />
@@ -400,9 +478,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/Test.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4002">
@@ -421,16 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestThreadPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Observer.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,16 +506,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/User.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Gate.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/BooleanLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/locks/Lock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1832">
@@ -500,13 +555,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/Lock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/ExecutionTask.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/QueryAction.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/Context.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestFuture.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/future/FutureService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="435">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/SimpleThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1363">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -528,78 +603,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadLocal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/ExecutionTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/QueryAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="e#106#107#0" expanded="true" />
-            <element signature="e#133#134#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/SimpleThreadLocal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/future/FutureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/CountDown.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="319">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/MakeStringRequest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/ActivationQueue.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/MethodRequest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/Result.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/RealResult.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/FutureResult.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/ActiveObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/DisplayStringRequest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/SchedularThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/ActiveObjectFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/activeobject/Servant.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26042">
+          <caret line="961" column="7" selection-start-line="961" selection-start-column="7" selection-end-line="961" selection-end-column="7" />
           <folding>
-            <element signature="e#116#117#0" expanded="true" />
-            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#37807#37808#0" expanded="true" />
+            <element signature="e#37839#37840#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/plugin.jar!/sun/plugin2/applet/Applet2ClassLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2030">
+          <caret line="110" column="20" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/Lock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/BooleanLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="305" column="32" selection-start-line="305" selection-start-column="32" selection-end-line="305" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/atomic/AtomicInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/exception/GetLockException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#112#113#0" expanded="true" />
+            <element signature="e#135#136#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestThreadPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestCASLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/concurrent/lock/CASLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,6 +800,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: junit:junit:4.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
