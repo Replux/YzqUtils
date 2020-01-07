@@ -1,6 +1,9 @@
 package cn.yzq.concurrent.lock;
 
-
+/**
+ * 读写锁
+ * @since 2020-1-6 18:37:20
+ */
 public class ReadWriteLock {
 
     private volatile int readingReaders=0;

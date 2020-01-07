@@ -4,6 +4,10 @@ import cn.yzq.concurrent.lock.exception.GetLockException;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 支持trylock
+ * @since 2020-1-6 18:36:41
+ */
 public class CASLock {
 
     private final AtomicInteger value = new AtomicInteger(0);
