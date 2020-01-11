@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 
 /**
- * 利用countdownLatch实现一个cyclicBarrier
+ * 利用countdownLatch简单模拟cyclicBarrier
  * @since 2020-1-7 14:18:54
  */
 public class ThreadBarrier{

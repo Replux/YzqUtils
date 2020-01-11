@@ -20,8 +20,8 @@ public class SimpleThreadPool extends Thread{
     };
 
     //component:
-    private volatile static LinkedList<Runnable> TASK_QUEUE=new LinkedList<>();
-    private volatile static List<Worker> WORKER_LIST = new ArrayList<>();
+    private final static LinkedList<Runnable> TASK_QUEUE=new LinkedList<>();
+    private final static List<Worker> WORKER_LIST = new ArrayList<>();
 
     //attributes:
     private final int taskCapacity;
@@ -83,7 +83,7 @@ public class SimpleThreadPool extends Thread{
             int count = WORKER_LIST.size();
             while(count>0){
                 for(Worker worker: WORKER_LIST){
-                    if(!TaskState.RUNNING.equals(worker.getTaskState() )){
+                    if(!TaskState.RUNNING.equals(worker.getTaskState())){
                         worker.interrupt();
                         worker.close();
                         count--;
